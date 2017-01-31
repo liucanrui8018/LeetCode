@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class threeSum {
+public class ThreeSum {
 
 	public static List<List<Integer>> threeSum(int[] num) {
 		Arrays.sort(num);
