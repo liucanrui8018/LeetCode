@@ -1,5 +1,5 @@
 
-public class isMatch {
+public class IsMatch {
 	
 	// Implement regular expression matching with support for '.' and '*'.
 	//

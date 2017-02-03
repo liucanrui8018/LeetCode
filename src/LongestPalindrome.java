@@ -1,5 +1,5 @@
 
-public class longestPalindrome {
+public class LongestPalindrome {
 	
 	
 	// Given a string s, find the longest palindromic substring in s. You may

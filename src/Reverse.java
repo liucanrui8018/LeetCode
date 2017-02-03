@@ -1,5 +1,5 @@
 
-public class reverse {
+public class Reverse {
 
 	// Reverse digits of an integer.
 	//

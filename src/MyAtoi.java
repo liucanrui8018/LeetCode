@@ -1,5 +1,5 @@
 
-public class myAtoi {
+public class MyAtoi {
 
 	// Implement atoi to convert a string to an integer.
 	//
