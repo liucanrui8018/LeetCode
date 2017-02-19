@@ -3,8 +3,10 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class MergeKLists {
+
 	// Merge k sorted linked lists and return it as one sorted list. Analyze and
 	// describe its complexity.
+
 	public ListNode mergeKLists(List<ListNode> lists) {
 		if (lists == null || lists.size() == 0)
 			return null;
