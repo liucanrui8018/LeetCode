@@ -11,11 +11,11 @@
  */
 public class RemoveDuplicates {
 
-    public int removeDuplicates(int A[], int n) {
-        if (n < 2) return n;
-        int id = 1;
-        for (int i = 1; i < n; ++i)
-            if (A[i] != A[i - 1]) A[id++] = A[i];
-        return id;
+    public int removeDuplicates(int[] nums) {
+        int i = nums.length > 0 ? 1 : 0;
+        for (int n : nums)
+            if (n > nums[i-1])
+                nums[i++] = n;
+        return i;
     }
 }

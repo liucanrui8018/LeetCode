@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class LetterCombinations {
 	// Given a digit string, return all possible letter combinations that the
@@ -12,12 +13,9 @@ public class LetterCombinations {
 	//
 	// Input:Digit string "23"
 	// Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
-	
-	public static void main(String[] args) {
-		System.out.println(letterCombinations("23"));
-	}
 
 	public static List<String> letterCombinations(String digits) {
+		if (Objects.equals(digits, "")) return new LinkedList<String>();
 		LinkedList<String> ans = new LinkedList<String>();
 		String[] mapping = new String[] { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
 		ans.add("");

@@ -22,7 +22,7 @@ public class FourSum {
 	public List<List<Integer>> fourSum(int[] nums, int target) {
 		ArrayList<List<Integer>> res = new ArrayList<List<Integer>>();
 		int len = nums.length;
-		if (nums == null || len < 4)
+		if (len < 4)
 			return res;
 
 		Arrays.sort(nums);
