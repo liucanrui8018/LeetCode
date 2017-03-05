@@ -14,7 +14,7 @@ public class FirstMissingPositive {
         if (n == 0)
             return 1;
         int k = partition(A) + 1;
-        int temp = 0;
+        int temp;
         int first_missing_Index = k;
         for (int i = 0; i < k; i++) {
             temp = Math.abs(A[i]);
@@ -30,7 +30,7 @@ public class FirstMissingPositive {
         return first_missing_Index + 1;
     }
 
-    public int partition(int[] A) {
+    private int partition(int[] A) {
         int n = A.length;
         int q = -1;
         for (int i = 0; i < n; i++) {
@@ -42,7 +42,7 @@ public class FirstMissingPositive {
         return q;
     }
 
-    public void swap(int[] A, int i, int j) {
+    private void swap(int[] A, int i, int j) {
         if (i != j) {
             A[i] ^= A[j];
             A[j] ^= A[i];

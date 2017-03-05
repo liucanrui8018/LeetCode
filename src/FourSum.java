@@ -20,7 +20,7 @@ public class FourSum {
 	// ]
 	//
 	public List<List<Integer>> fourSum(int[] nums, int target) {
-		ArrayList<List<Integer>> res = new ArrayList<List<Integer>>();
+		ArrayList<List<Integer>> res = new ArrayList<>();
 		int len = nums.length;
 		if (len < 4)
 			return res;
@@ -58,8 +58,8 @@ public class FourSum {
 	 * of them into the ArrayList fourSumList, using
 	 * fourSumList.add(Arrays.asList(z1, the three numbers))
 	 */
-	public void threeSumForFourSum(int[] nums, int target, int low, int high, ArrayList<List<Integer>> fourSumList,
-			int z1) {
+	private void threeSumForFourSum(int[] nums, int target, int low, int high, ArrayList<List<Integer>> fourSumList,
+									int z1) {
 		if (low + 1 >= high)
 			return;
 
@@ -95,8 +95,8 @@ public class FourSum {
 	 * of them into the ArrayList fourSumList, using
 	 * fourSumList.add(Arrays.asList(z1, z2, the two numbers))
 	 */
-	public void twoSumForFourSum(int[] nums, int target, int low, int high, ArrayList<List<Integer>> fourSumList,
-			int z1, int z2) {
+	private void twoSumForFourSum(int[] nums, int target, int low, int high, ArrayList<List<Integer>> fourSumList,
+								  int z1, int z2) {
 
 		if (low >= high)
 			return;
@@ -119,6 +119,5 @@ public class FourSum {
 			if (sum > target)
 				j--;
 		}
-		return;
 	}
 }

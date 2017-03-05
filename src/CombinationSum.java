@@ -6,7 +6,6 @@ import java.util.List;
  * Created by 刘灿锐 on 2017/2/24 0024.
  * Given a set of candidate numbers (C) (without duplicates) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
  *
- *
  * The same repeated number may be chosen from C unlimited number of times.
  *
  * Note:
@@ -21,6 +20,7 @@ import java.util.List;
  */
 
 public class CombinationSum {
+
     public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);

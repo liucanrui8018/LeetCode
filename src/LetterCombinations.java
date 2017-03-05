@@ -15,8 +15,8 @@ public class LetterCombinations {
 	// Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 
 	public static List<String> letterCombinations(String digits) {
-		if (Objects.equals(digits, "")) return new LinkedList<String>();
-		LinkedList<String> ans = new LinkedList<String>();
+		if (Objects.equals(digits, "")) return new LinkedList<>();
+		LinkedList<String> ans = new LinkedList<>();
 		String[] mapping = new String[] { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
 		ans.add("");
 		for (int i = 0; i < digits.length(); i++) {
