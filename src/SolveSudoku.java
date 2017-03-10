@@ -1,5 +1,10 @@
 /**
  * Created by 刘灿锐 on 2017/2/22 0022.
+ * Write a program to solve a Sudoku puzzle by filling the empty cells.
+ *
+ * Empty cells are indicated by the character '.'.
+ *
+ * You may assume that there will be only one unique solution.
  */
 public class SolveSudoku {
     public void solveSudoku(char[][] board) {
@@ -8,7 +13,7 @@ public class SolveSudoku {
         solve(board);
     }
 
-    public boolean solve(char[][] board) {
+    private boolean solve(char[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
                 if (board[i][j] == '.') {
