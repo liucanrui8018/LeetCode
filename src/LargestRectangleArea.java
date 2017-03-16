@@ -12,6 +12,7 @@ import java.util.Stack;
  * Given heights = [2,1,5,6,2,3],
  * return 10.
  */
+
 public class LargestRectangleArea {
     public int largestRectangleArea(int[] height) {
         int len = height.length;

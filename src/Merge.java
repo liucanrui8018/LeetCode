@@ -1,38 +1,17 @@
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by 刘灿锐 on 2017/2/27 0027.
- * Given a collection of intervals, merge all overlapping intervals.
+ * Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
  *
- * For example,
- * Given [1,3],[2,6],[8,10],[15,18],
- * return [1,6],[8,10],[15,18].
+ * Note:
+ * You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.
  */
 public class Merge {
-    public List<Interval> merge(List<Interval> intervals) {
-        if (intervals.size() <= 1)
-            return intervals;
-
-        // Sort by ascending starting point using an anonymous Comparator
-        intervals.sort((i1, i2) -> Integer.compare(i1.start, i2.start));
-
-        List<Interval> result = new LinkedList<Interval>();
-        int start = intervals.get(0).start;
-        int end = intervals.get(0).end;
-
-        for (Interval interval : intervals) {
-            if (interval.start <= end) // Overlapping intervals, move the end if needed
-                end = Math.max(end, interval.end);
-            else {                     // Disjoint intervals, add the previous one and reset bounds
-                result.add(new Interval(start, end));
-                start = interval.start;
-                end = interval.end;
-            }
-        }
-
-        // Add the last interval
-        result.add(new Interval(start, end));
-        return result;
+    public void merge(int A[], int m, int B[], int n) {
+        int i = m - 1, j = n - 1, k = m + n - 1;
+        while (i > -1 && j > -1)
+            A[k--] = (A[i] > B[j]) ? A[i--] : B[j--];
+        while (j > -1)
+            A[k--] = B[j--];
     }
 }
