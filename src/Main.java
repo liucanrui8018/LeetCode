@@ -25,7 +25,8 @@ public class Main {
 //			if (temp >= '0' && temp <= '9')
 //				result += (temp - '0') * Math.pow(16, len-i-1);
 //		}
-		System.out.println(minDistance("abc","def"));
+//		System.out.println(minDistance("abc","def"));
+
 	}
 
 	private static int minDistance(String word1, String word2) {

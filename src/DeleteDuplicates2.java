@@ -14,7 +14,7 @@ public class DeleteDuplicates2 {
         ListNode pre = FakeHead;
         ListNode cur = head;
         while (cur != null) {
-            while (cur.next != null && cur.data == cur.next.data) {
+            while (cur.next != null && cur.val == cur.next.val) {
                 cur = cur.next;
             }
             if (pre.next == cur) {

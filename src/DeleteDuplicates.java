@@ -10,6 +10,6 @@ public class DeleteDuplicates {
     private ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) return head;
         head.next = deleteDuplicates(head.next);
-        return head.data == head.next.data ? head.next : head;
+        return head.val == head.next.val ? head.next : head;
     }
 }

@@ -13,7 +13,7 @@ public class MergeTwoLists {
 		}
 
 		ListNode mergeHead;
-		if (l1.data < l2.data) {
+		if (l1.val < l2.val) {
 			mergeHead = l1;
 			mergeHead.next = mergeTwoLists(l1.next, l2);
 		} else {
