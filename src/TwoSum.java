@@ -16,7 +16,7 @@ public class TwoSum {
 	// return [0, 1].
 
 	public static int[] twoSum(int[] numbers, int target) {
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < numbers.length; i++) {
 			if (map.containsKey(numbers[i])) {
 				return new int[] { map.get(numbers[i]) + 1, i + 1 };
