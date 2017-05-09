@@ -30,7 +30,7 @@ public class FindOrder {
         return solveByDFS(adjs);
     }
 
-    private void initialiseGraph(int[] incLinkCounts, List<List<Integer>> adjs, int[][] prerequisites){
+    private void initialiseGraph(int[] incLinkCounts, List<List<Integer>> adjs, int[][] prerequisites) {
         int n = incLinkCounts.length;
         while (n-- > 0) adjs.add(new ArrayList<>());
         for (int[] edge : prerequisites) {
@@ -39,7 +39,7 @@ public class FindOrder {
         }
     }
 
-    private int[] solveByBFS(int[] incLinkCounts, List<List<Integer>> adjs){
+    private int[] solveByBFS(int[] incLinkCounts, List<List<Integer>> adjs) {
         int[] order = new int[incLinkCounts.length];
         Queue<Integer> toVisit = new ArrayDeque<>();
         for (int i = 0; i < incLinkCounts.length; i++) {
@@ -51,7 +51,8 @@ public class FindOrder {
             order[visited++] = from;
             for (int to : adjs.get(from)) {
                 incLinkCounts[to]--;
-                if (incLinkCounts[to] == 0) toVisit.offer(to);
+                if (incLinkCounts[to] == 0)
+                    toVisit.offer(to);
             }
         }
         return visited == incLinkCounts.length ? order : new int[0];
