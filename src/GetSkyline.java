@@ -15,7 +15,7 @@ import java.util.*;
  * For instance, the skyline in Figure B should be represented as:[ [2 10], [3 15], [7 12], [12 0], [15 10], [20 8], [24, 0] ].
  */
 public class GetSkyline {
-    public List<int[]> getSkyline(int[][] buildings) {
+    public static List<int[]> getSkyline(int[][] buildings) {
         List<int[]> result = new ArrayList<>();
         List<int[]> height = new ArrayList<>();
         for (int[] b : buildings) {
@@ -27,6 +27,9 @@ public class GetSkyline {
                 return a[0] - b[0];
             return a[1] - b[1];
         });
+        for (int[] aResult : height) {
+            System.out.println(aResult[0] + "  " + aResult[1]);
+        }
         Queue<Integer> pq = new PriorityQueue<>((a, b) -> (b - a));
         pq.offer(0);
         int prev = 0;
