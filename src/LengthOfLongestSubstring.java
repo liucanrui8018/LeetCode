@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class LengthOfLongestSubstring {
 	// Given a string, find the length of the longest substring without
@@ -16,7 +17,7 @@ public class LengthOfLongestSubstring {
 	public int lengthOfLongestSubstring(String s) {
 		if (s.length() == 0)
 			return 0;
-		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+		HashMap<Character, Integer> map = new HashMap<>();
 		int max = 0;
 		for (int i = 0, j = 0; i < s.length(); ++i) {
 			if (map.containsKey(s.charAt(i))) {
