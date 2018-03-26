@@ -1,3 +1,5 @@
+package Top100;
+
 import java.util.Stack;
 
 /**
@@ -57,15 +59,6 @@ public class ConvertBST {
         return root;
     }
 
-    /* Get the node with the smallest value greater than this one. */
-    private TreeNode getSuccessor(TreeNode node) {
-        TreeNode succ = node.right;
-        while (succ.left != null && succ.left != node) {
-            succ = succ.left;
-        }
-        return succ;
-    }
-
     public TreeNode convertBST2(TreeNode root) {
         int sum = 0;
         TreeNode node = root;
@@ -109,4 +102,14 @@ public class ConvertBST {
 
         return root;
     }
+
+    /* Get the node with the smallest value greater than this one. */
+    private TreeNode getSuccessor(TreeNode node) {
+        TreeNode succ = node.right;
+        while (succ.left != null && succ.left != node) {
+            succ = succ.left;
+        }
+        return succ;
+    }
+
 }
