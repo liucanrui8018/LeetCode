@@ -7,13 +7,13 @@ import java.util.Stack;
  * Example:
  * <p>
  * Input: The root of a Binary Search Tree like this:
- * 5
- * /   \
+ *    5
+ *  /   \
  * 2     13
  * <p>
  * Output: The root of a Greater Tree like this:
- * 18
- * /   \
+ *     18
+ *   /   \
  * 20     13
  */
 
